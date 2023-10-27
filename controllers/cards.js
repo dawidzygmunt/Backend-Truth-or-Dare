@@ -175,7 +175,7 @@ const getTruthCardsAmount = asyncWrapper(async (req, res) => {
   const cards = await Baza.find({ typ: 'Prawda' })
   let licznik = 0
   cards.forEach(element => {
-    console.log(element);
+  
     licznik = licznik + element.ilosc
   });
   if (!cards) {
@@ -188,7 +188,6 @@ const getChallengeCardsAmount = asyncWrapper(async (req, res) => {
   const cards = await Baza.find({ typ: 'Wyzwanie' })
   let licznik = 0
   cards.forEach(element => {
-    console.log(element);
     licznik = licznik + element.ilosc
   });
   if (!cards) {
