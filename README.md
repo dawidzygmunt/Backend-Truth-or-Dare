@@ -3,6 +3,9 @@
 ## Opis projektu
 Backend do gry "Prawda czy Wyzwanie" napisany w języku JavaScript przy użyciu środowiska Node.js i frameworka Express. Aplikacja obsługuje logikę gry, zarządzanie graczami, pytania oraz wyzwania.
 
+## Live
+Zobacz Demo: https://dawidzygmuntdev.pl/cards
+
 ## Wymagania
 Aby uruchomić aplikację, potrzebujesz zainstalowanego środowiska Node.js. Następnie, wykonaj poniższe polecenia w terminalu:
 
