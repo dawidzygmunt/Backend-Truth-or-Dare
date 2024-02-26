@@ -11,9 +11,7 @@ const routerCards = require('./routes/cards')
 
 //Middleware
 app.use(express.json())
-// app.use("/cards", express.static(__dirname + "/public"));
-// app.use(express.static("/public"));
-// app.use(express.static("/public/static"));
+
 
 app.use(express.urlencoded({ extended: true }))
 app.use('/api/v1/', routerCards)

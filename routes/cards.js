@@ -21,9 +21,25 @@ const {
   getChallengeCardsAmountBasic,
   getAllCardsAmount,
   getTruthCardsAmount,
-  getChallengeCardsAmount
+  getChallengeCardsAmount,
+  getAllCollections,
+  createCollection,
+  getSingleCollection,
+  getAllEditions,
+  getSingleEdition,
+  createEdition,
+  delateSingleCollection,
+  deleteSingleEdition
 } = require('../controllers/cards')
   
+router.route('/editions').get(getAllEditions).post(createEdition)
+router.route('/editions/:id').get(getSingleEdition).delete(deleteSingleEdition)
+
+router.route('/cards').get(getAllCards).post(createCard)
+router.route('/cards/:id').get(getSingleCard).patch(updateCard).delete(deleteSingleCard)
+
+router.route('/collections').get(getAllCollections).post(createCollection)
+router.route('/collections/:id').get(getSingleCollection).delete(delateSingleCollection)
 
 router.route('/cards').get(getAllCards).post(createCard)
 router.route('/cards/:id').get(getSingleCard).patch(updateCard).delete(deleteSingleCard)

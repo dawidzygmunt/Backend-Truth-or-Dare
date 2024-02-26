@@ -14,11 +14,11 @@ const dataOriginal = new mongoose.Schema({
   },
   ilosc: {
     type: Number,
-    required: [true, 'Podaj ilosc']
+    required: [true, 'Podaj ilosc mozliwych powtorzen']
   },
   kara: {
     type: Number,
-    required: [true, 'Podaj typ karty']
+    required: [true, 'Wpisz ilość kieliszkow']
   }
 
 })
