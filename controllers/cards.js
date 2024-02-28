@@ -138,7 +138,7 @@ const drawSingleCardGame = asyncWrapper(async (req, res, next) => {
   ])
   console.log(card.length);
   if (card.length < 1) {
-    return next(createNewError('Koniec kart: ' + cardType, 404))
+    return next(createNewError('Koniec kart: ' + cardType, 204))
   }
   res.status(200).json({ card })
 })
