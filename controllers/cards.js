@@ -38,7 +38,7 @@ const deleteSingleEdition = asyncWrapper(async (req, res) => {
 
 const getAllCollections = asyncWrapper(async (req, res) => {
   const collections = await Kolekcja.find({})
-  res.status(200).json({ collections })
+  res.status(200).json({ collections, nbHits: collections.length })
 })
 
 const getSingleCollection = asyncWrapper(async (req, res) => {
