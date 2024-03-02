@@ -1,7 +1,6 @@
 require('dotenv').config()
 require('express-async-errors')
 
-const { log } = require('console')
 const express = require('express')
 const app = express()
 const errorHandlerMiddleware = require('./middleware/error-handler')
@@ -12,7 +11,7 @@ const routerCards = require('./routes/cards')
 //Middleware
 app.use(express.json())
 
-
+app.use(express.static('./public'))
 app.use(express.urlencoded({ extended: true }))
 app.use('/api/v1/', routerCards)
 
